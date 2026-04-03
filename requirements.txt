@@ -3,6 +3,10 @@
 # Refresh the lock after editing this file:
 #   pip install "pip-tools>=7,<8" && pip-compile --output-file requirements-lock.txt requirements.txt
 # Security: pip-audit -r requirements-lock.txt (see requirements-dev.txt).
+
+# CI / local test runs (also pinned in requirements-lock.txt)
+pytest>=7.4.0,<9
+
 fastapi>=0.109.0,<1
 uvicorn[standard]>=0.27.0,<0.35
 pandas>=2.0.0,<3

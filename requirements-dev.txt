@@ -1,6 +1,6 @@
-# Development / CI tooling (install after production pins):
+# Development / CI tooling (install after production pins).
+# pytest is listed in requirements.txt / requirements-lock.txt.
 #   pip install -r requirements-lock.txt
 #   pip install -r requirements-dev.txt
-pytest>=7.4.0,<9
 pip-audit>=2.6.0,<3
 pip-tools>=7.4.0,<8

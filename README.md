@@ -11,7 +11,7 @@ Real-time healthcare denial appeal letter drafter. Enter claim and denial detail
    cd appeal_ai
    pip install -r requirements-lock.txt
    ```
-   For local development tooling (pytest, pip-audit, pip-compile):
+   For extra dev tooling (pip-audit, pip-compile). **pytest** is included via `requirements.txt` / the lockfile:
    ```bash
    pip install -r requirements-dev.txt
    ```
