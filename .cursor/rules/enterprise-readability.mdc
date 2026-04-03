@@ -1,0 +1,104 @@
+---
+description: Enterprise standards — security, PHI-safe ops, docstrings, timeouts, deps, evolving governance
+alwaysApply: true
+---
+
+# Enterprise engineering standards (this project + global User rules)
+
+Apply to **all** code, scripts, configs, and reviews. Prefer **clear, standard patterns** a junior developer can follow, without sacrificing production quality.
+
+**Global Cursor:** Paste an aligned copy into **Cursor Settings → Rules → User rules** (see `%USERPROFILE%\.cursor\USER_RULES_ENTERPRISE_FULL.txt` on Windows). **Keep project rules and User rules in sync** when you change standards.
+
+---
+
+## 0. Governance — keep rules and code aligned over time
+
+- **Review this rule set** when you change stack (major framework upgrades), **threat model** (new public surface), **compliance** expectations, or after **incidents/postmortems**.
+- When the codebase adopts a new practice (e.g. lockfiles, API auth), **update these rules in the same PR** so the AI and humans stay aligned.
+- Prefer **small, focused rule files** if this document grows past ~500 lines (split e.g. `security.mdc`, `python-style.mdc`).
+- **Market / vendor changes** (deprecated SDKs, new LLM APIs): document migration expectations in rules and remove obsolete guidance.
+
+---
+
+## 1. Readability and structure
+
+- Prefer **obvious over clever**: explicit control flow, early returns, shallow nesting.
+- **Naming:** verbs for functions, nouns for data; avoid abbreviations except industry-standard (CPT, ICD).
+- **One responsibility per function**; split unrelated behavior.
+- **Top-to-bottom story:** validate → process → return. Short section comments for phases (`# --- Load configuration ---`).
+- **Magic values:** named constants or config; document units (seconds, bytes).
+
+---
+
+## 2. Documentation (Python public API)
+
+- **Module:** purpose, prerequisites (env, files), security/deployment caveats when relevant.
+- **Every public function/method:** NumPy-style sections where practical — **Parameters**, **Returns**, **Raises**, **Notes** (side effects, I/O, network, PHI).
+- **Private helpers:** one-line docstring if the name is not enough.
+- **Line comments:** only for non-obvious logic (regex, business rules, workarounds).
+- **External APIs (LLM, HTTP, DB):** document **timeouts**, **retries** (if any), **idempotency**, and **auth** at the client boundary.
+
+---
+
+## 3. Outbound calls and resilience
+
+- **Explicit timeouts** on network clients (HTTP/LLM SDKs); configure via env (e.g. `LLM_REQUEST_TIMEOUT_SECONDS`), not unbounded defaults.
+- Document whether calls are **retried**; default to **fail fast** unless product requires retries with backoff.
+
+---
+
+## 4. Dependencies and supply chain
+
+- In `requirements.txt`, use **lower + upper bounds** (next major) to reduce surprise breaks; for production, add a **lockfile** (`pip freeze`, `pip-compile`, or Poetry/pdm lock).
+- Before releases, run **`pip audit`** (or org equivalent) and patch critical CVEs.
+
+---
+
+## 5. Logging, debugging, operations
+
+- **Leveled logging** with safe context (operation, counts, durations). **Correlation/request IDs** when an API or job layer exists.
+- **Never log:** secrets, tokens, full auth headers, or **PHI/PII** unless explicitly approved and redacted.
+- Errors: **what** failed, **where**, **what to check** — not only `"Error"`.
+- Use **specific exception types** where possible; use **`raise ... from`** to preserve chains.
+- Avoid **bare `except`** and silent **`pass`** except narrowly scoped and **documented** (e.g. intentional degraded mode).
+
+---
+
+## 6. Security and vulnerability awareness
+
+- Injection (SQL, command), **path traversal**, **SSRF** on URL fetch, **secrets in repo**, **XSS/CSRF** on web surfaces, **authz at trust boundaries**.
+
+---
+
+## 7. PHI, PII, HIPAA-oriented engineering (not legal advice)
+
+- Minimize data; default logs **without PHI**; careful **third-party/LLM** data flow; encryption in transit; least-privilege credentials.
+
+---
+
+## 8. API keys, Azure, cloud
+
+- No keys in source; **Managed Identity / Key Vault** patterns for Azure; `.env` gitignored; `.env.example` placeholders only.
+
+---
+
+## 9. Web and Streamlit / MVP apps
+
+- If the UI is exposed beyond localhost, **document** requirement for **TLS + auth** (reverse proxy, SSO, etc.). MVP without auth is **not** internet-safe.
+
+---
+
+## 10. Review checklist (before merge)
+
+- [ ] Public APIs documented; tricky logic commented.
+- [ ] No secrets/PHI in code, logs, examples.
+- [ ] Inputs validated; traversal/SSRF/injection considered for touched paths.
+- [ ] Outbound timeouts set for new network code.
+- [ ] Dependencies bounded; lockfile updated if the team uses one.
+- [ ] Scoped change only.
+
+---
+
+## 11. When editing existing code
+
+- Match project conventions; **minimal diff**; preserve unrelated behavior.

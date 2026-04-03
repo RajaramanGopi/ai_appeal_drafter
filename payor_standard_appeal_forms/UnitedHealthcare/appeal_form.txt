@@ -1,0 +1,27 @@
+UnitedHealthcare — Formal Appeal / Dispute (written submission template)
+=======================================================================
+Payer: {{PAYER_NAME}}
+Member / patient name: {{PATIENT_NAME}}
+Date of service: {{DATE_OF_SERVICE}}
+Provider name & NPI: {{PROVIDER_NAME}}
+
+Claim / remittance reference
+----------------------------
+Claim / reference number (from PRA or portal): _________________________
+Denial codes (CARC/RARC): {{DENIAL_CODE}}
+Procedure codes: {{CPT_CODE}}
+Diagnosis codes: {{ICD_CODE}}
+Payer’s stated denial reason: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Appeal basis and clinical or contractual justification
+--------------------------------------------------------
+{{APPEAL_BODY}}
+
+Attachments (EOB/PRA copy, medical records, policy citations, auth correspondence)
+---------------------------------------------------------------------------------
+_______________________________________________________________________________
+
+Provider / authorized representative signature: _________________________
+Date: {{REQUEST_DATE}}

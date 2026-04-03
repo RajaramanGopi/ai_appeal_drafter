@@ -1,0 +1,30 @@
+Blue Cross Blue Shield — Clinical / Claim Editing Reconsideration (template)
+==============================================================================
+Payer: {{PAYER_NAME}}
+For coding edits, bundling, or clinical editing denials—follow the plan’s reconsideration or
+clinical editing process (may be Availity, plan portal, or fax per plan rules).
+
+Patient name: {{PATIENT_NAME}}
+Date of service: {{DATE_OF_SERVICE}}
+Provider NPI / name: {{PROVIDER_NAME}}
+
+Edit / denial reference
+-----------------------
+Edit message or codes: {{DENIAL_CODE}}
+CPT / HCPCS: {{CPT_CODE}}
+ICD-10: {{ICD_CODE}}
+Narrative from payer: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Reconsideration rationale
+-------------------------
+{{APPEAL_BODY}}
+
+Clinical documentation checklist
+--------------------------------
+[ ] Progress / operative notes supporting medical necessity
+[ ] NCCI / bundling justification if disputing an edit
+[ ] Modifier rationale (if applicable)
+
+Signature: _________________________  Date: {{REQUEST_DATE}}

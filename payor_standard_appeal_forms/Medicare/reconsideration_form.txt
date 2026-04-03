@@ -1,0 +1,33 @@
+Medicare — Reconsideration (second level / QIC-style narrative template)
+========================================================================
+Payer: {{PAYER_NAME}}
+For Part A/B, the second level is generally reconsideration by the QIC after a redetermination decision.
+Complete only after you have a redetermination notice and within the timeframe stated on that notice.
+
+Beneficiary name: {{PATIENT_NAME}}
+Date(s) of service: {{DATE_OF_SERVICE}}
+Appellant provider / supplier: {{PROVIDER_NAME}}
+
+Prior appeal reference
+----------------------
+Redetermination decision date (if applicable): _________________________
+Redetermination number / reference: _________________________
+
+Claim / denial summary
+----------------------
+Codes from remittance / notice: {{DENIAL_CODE}}
+CPT / HCPCS: {{CPT_CODE}}
+ICD-10: {{ICD_CODE}}
+Denial reason as stated: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Why the redetermination (or prior decision) should be reversed
+--------------------------------------------------------------
+{{APPEAL_BODY}}
+
+Evidence included with this request
+----------------------------------
+_______________________________________________________________________________
+
+Signature: _________________________  Date: {{REQUEST_DATE}}

@@ -1,0 +1,34 @@
+UnitedHealthcare — Claim Reconsideration Request (paper-style template)
+=======================================================================
+Payer: {{PAYER_NAME}}
+For payment disputes / post-service claim corrections per UHC reconsideration instructions.
+Do not use for formal appeals where a separate dispute process is required—follow the PRA.
+
+Patient name: {{PATIENT_NAME}}
+Date of service: {{DATE_OF_SERVICE}}
+Physician / provider: {{PROVIDER_NAME}}
+
+Claim information
+-----------------
+Claim control number: _________________________
+Billed amount (if applicable): _________________________
+CARC/RARC or payer message codes: {{DENIAL_CODE}}
+CPT / HCPCS: {{CPT_CODE}}
+ICD-10: {{ICD_CODE}}
+Reason on remittance: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Reconsideration explanation
+---------------------------
+{{APPEAL_BODY}}
+
+Required / attached documentation
+----------------------------------
+[ ] Copy of Provider Remittance Advice (PRA) or EOB
+[ ] Medical records (if clinical)
+[ ] Other: _______________________________________________________________________
+
+Submit per instructions on the PRA or UHCprovider.com (portal preferred).
+
+Signature: _________________________  Date: {{REQUEST_DATE}}

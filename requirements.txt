@@ -1,0 +1,21 @@
+# Version ranges for upgrades; production installs should use the frozen lockfile:
+#   pip install -r requirements-lock.txt
+# Refresh the lock after editing this file:
+#   pip install "pip-tools>=7,<8" && pip-compile --output-file requirements-lock.txt requirements.txt
+# Security: pip-audit -r requirements-lock.txt (see requirements-dev.txt).
+fastapi>=0.109.0,<1
+uvicorn[standard]>=0.27.0,<0.35
+pandas>=2.0.0,<3
+openai>=1.0.0,<2
+google-generativeai>=0.8.0,<1
+python-dotenv>=1.0.0,<2
+
+# Knowledge base (RAG): local embeddings + vector store
+sentence-transformers>=2.2.0,<6
+chromadb>=0.4.0,<2
+trafilatura>=1.6.0,<3
+requests>=2.28.0,<3
+pyyaml>=6.0,<7
+
+# Model Context Protocol server (Cursor / Claude Desktop): python -m mcp_server
+mcp>=1.0.0,<2

@@ -1,0 +1,31 @@
+# Optional: one HTTPS URL per line for RAG ingest (python -m knowledge_base.ingest --urls).
+# Curated .md under knowledge_base/curated/ is always loaded; URLs add fresh web-extracted text.
+# Official / payor-hosted pages only; verify annually — processes and forms change.
+#
+# --- Medicare / CMS (fee-for-service & appeals policy) ---
+https://www.cms.gov/medicare/appeals-grievances/fee-for-service/first-level-appeal-redetermination-medicare-contractor
+https://www.cms.gov/medicare/appeals-grievances/fee-for-service/second-level-appeal-reconsideration-qualified-independent-contractor
+https://www.cms.gov/medicare/appeals-grievances/medicare-advantage-part-c-appeals-ptc/appeals
+https://www.cms.gov/medicare/appeals-grievances/part-d-appeals-grievances
+https://www.cms.gov/medicare-coverage-database/view/ncd.aspx?ncdid=1
+https://www.medicare.gov/basics/how-medicare-works/appeals
+#
+# --- Aetna (CVS Health) provider appeals ---
+https://www.aetna.com/health-care-professionals/disputes-appeals/provider-appeals.html
+https://www.aetna.com/health-care-professionals/disputes-appeals.html
+#
+# --- UnitedHealthcare / Optum provider claims & appeals ---
+https://www.uhcprovider.com/en/claims-payments-billing/appeals.html
+https://www.uhcprovider.com/en/claims-payments-billing.html
+#
+# --- Cigna Healthcare provider appeals ---
+https://www.cigna.com/health-care-providers/coverage-and-claims/appeals-disputes
+https://www.cigna.com/health-care-providers/coverage-and-claims/appeals-disputes/how-to-submit
+#
+# --- Blue Cross Blue Shield (association / find your plan) ---
+https://www.bcbs.com/providers
+https://www.bcbs.com/members/claims
+#
+# --- General regulatory / industry reference (denial code context) ---
+https://www.cms.gov/medicare/claims-and-overpayment/how-to-handle-reopening-and-recoupments
+https://www.cms.gov/medicare/appeals-grievances

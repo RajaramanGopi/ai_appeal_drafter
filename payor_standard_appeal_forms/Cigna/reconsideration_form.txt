@@ -1,0 +1,22 @@
+Cigna — Informal Reconsideration / Corrected Information (template)
+===================================================================
+Payer: {{PAYER_NAME}}
+Use when resolving missing information, clerical corrections, or payer-requested follow-up
+before or alongside a formal payment review.
+
+Patient name: {{PATIENT_NAME}}
+Date of service: {{DATE_OF_SERVICE}}
+Provider: {{PROVIDER_NAME}}
+
+Reference codes
+---------------
+{{DENIAL_CODE}}  |  CPT: {{CPT_CODE}}  |  ICD: {{ICD_CODE}}
+Payer message: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Summary of correction or additional information
+-----------------------------------------------
+{{APPEAL_BODY}}
+
+Signature: _________________________  Date: {{REQUEST_DATE}}

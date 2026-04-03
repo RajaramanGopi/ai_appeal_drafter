@@ -1,0 +1,24 @@
+Aetna Standard Appeal / Reconsideration Form
+============================================
+
+Payer: {{PAYER_NAME}}
+Patient Name: {{PATIENT_NAME}}
+Date of Service: {{DATE_OF_SERVICE}}
+Provider Name: {{PROVIDER_NAME}}
+
+Claim/Denial Information
+-------------------------
+Denial Code (CARC/RARC): {{DENIAL_CODE}}
+CPT Code(s): {{CPT_CODE}}
+ICD Code(s): {{ICD_CODE}}
+Denial Reason: {{DENIAL_REASON}}
+
+Date of This Request: {{REQUEST_DATE}}
+
+Appeal / Reconsideration Statement
+----------------------------------
+
+{{APPEAL_BODY}}
+
+----------------------------------
+Provider Signature: _________________________   Date: {{REQUEST_DATE}}

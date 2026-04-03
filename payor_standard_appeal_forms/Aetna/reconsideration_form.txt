@@ -1,0 +1,32 @@
+Aetna — Request for Reconsideration / Corrected Claim Narrative
+================================================================
+(Use for billing or coding corrections when a full formal appeal is not required;
+follow the EOB or portal for the correct path. Attach corrected claim if applicable.)
+
+Payer: {{PAYER_NAME}}
+Patient / Member name: {{PATIENT_NAME}}
+Date of service: {{DATE_OF_SERVICE}}
+Rendering / Billing provider: {{PROVIDER_NAME}}
+
+Claim identifiers (from EOB or portal)
+--------------------------------------
+Denial / remark codes (CARC/RARC): {{DENIAL_CODE}}
+CPT / HCPCS: {{CPT_CODE}}
+ICD-10 diagnosis: {{ICD_CODE}}
+Payer’s stated reason: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Reconsideration summary
+-----------------------
+Explain the correction or missing information resolved (codes, units, modifiers, auth number, etc.):
+
+{{APPEAL_BODY}}
+
+Attachments checklist (as applicable)
+-------------------------------------
+[ ] Corrected claim or void/rebill reference
+[ ] Medical records (if clinical reconsideration)
+[ ] Copy of EOB / remittance for the line(s) in dispute
+
+Submitter signature: _________________________  Date: {{REQUEST_DATE}}

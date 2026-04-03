@@ -1,0 +1,32 @@
+Medicare — Redetermination / First-Level Appeal Request (CMS-20027 style narrative)
+==================================================================================
+Payer: {{PAYER_NAME}}
+Use for Traditional Medicare (Part A/B) redetermination with your MAC unless the denial notice specifies otherwise.
+
+Beneficiary / patient name: {{PATIENT_NAME}}
+Medicare Beneficiary Identifier (MBI) or HICN (if instructed): _________________________
+Date(s) of service: {{DATE_OF_SERVICE}}
+Provider / supplier name: {{PROVIDER_NAME}}
+
+Claim / notice details
+----------------------
+Claim / document control number (if known): _________________________
+Denial / adjustment codes (CARC/RARC or MSN language): {{DENIAL_CODE}}
+Procedure / service codes: {{CPT_CODE}}
+Diagnosis codes: {{ICD_CODE}}
+Description of denial from notice: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Statement of disagreement and supporting rationale
+----------------------------------------------------
+{{APPEAL_BODY}}
+
+List of attachments (chart notes, orders, LCD/NCD citations, etc.)
+------------------------------------------------------------------
+_______________________________________________________________________________
+
+I request a redetermination of the claim determination described above.
+
+Signature of appellant or authorized representative: _________________________
+Date: {{REQUEST_DATE}}

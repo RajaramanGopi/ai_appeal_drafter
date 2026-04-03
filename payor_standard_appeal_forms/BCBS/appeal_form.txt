@@ -1,0 +1,34 @@
+Blue Cross Blue Shield — Written Appeal / Post-Service Dispute (template)
+===========================================================================
+Payer: {{PAYER_NAME}}
+BCBS plans are independent—use the member’s **specific** plan name, ID, and address from the EOB.
+
+Member / patient name: {{PATIENT_NAME}}
+Subscriber / member ID: _________________________
+Group / plan number: _________________________
+Date of service: {{DATE_OF_SERVICE}}
+Provider / practice name: {{PROVIDER_NAME}}
+
+Claim reference
+---------------
+Claim number (from EOB or portal): _________________________
+Denial codes (CARC/RARC): {{DENIAL_CODE}}
+Procedure codes: {{CPT_CODE}}
+Diagnosis codes: {{ICD_CODE}}
+EOB denial reason: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Appeal statement
+----------------
+{{APPEAL_BODY}}
+
+Enclosures
+----------
+[ ] Copy of EOB / remittance
+[ ] Medical records & orders
+[ ] Plan medical policy citations (if applicable)
+
+Mail or upload per **your BCBS plan’s** instructions (portal URL on member card).
+
+Signature: _________________________  Date: {{REQUEST_DATE}}

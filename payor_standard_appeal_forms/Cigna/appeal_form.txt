@@ -1,0 +1,31 @@
+Cigna — Health Care Professional Payment Review / Appeal (template)
+===================================================================
+Payer: {{PAYER_NAME}}
+Patient name: {{PATIENT_NAME}}
+Date of service: {{DATE_OF_SERVICE}}
+Provider / facility name: {{PROVIDER_NAME}}
+
+Claim / payment information
+---------------------------
+Member ID (if available): _________________________
+Claim number: _________________________
+CARC/RARC or EOP codes: {{DENIAL_CODE}}
+CPT / HCPCS: {{CPT_CODE}}
+ICD-10 codes: {{ICD_CODE}}
+Denial or payment reason from EOP: {{DENIAL_REASON}}
+
+Date of this request: {{REQUEST_DATE}}
+
+Appeal / payment review narrative
+---------------------------------
+{{APPEAL_BODY}}
+
+Documentation submitted
+-----------------------
+[ ] Copy of claim / EOP
+[ ] Medical records (operative note, progress notes, labs, imaging reports)
+[ ] Authorization / referral (if applicable)
+
+Mailing address: use the address on the member’s ID card or Cigna’s published appeals instructions.
+
+Signature: _________________________  Date: {{REQUEST_DATE}}

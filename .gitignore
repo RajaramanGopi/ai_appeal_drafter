@@ -1,0 +1,15 @@
+.env
+.venv
+venv
+logs/
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+*.egg-info
+dist
+build
+
+# Chroma vector DB (optional: commit empty or ignore to keep index local)
+chroma_db/
