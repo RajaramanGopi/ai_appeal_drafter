@@ -1,0 +1,9 @@
+# Optional: Model Context Protocol server (``python -m mcp_server`` for Cursor / Claude Desktop).
+# Install after the main app dependencies, e.g.:
+#   pip install -r requirements-lock.txt
+#   pip install -r requirements-mcp.txt
+#
+# The ``mcp`` package may declare Windows-only deps (e.g. pywin32); those are not in
+# requirements-lock.txt so Linux CI and Linux servers stay installable.
+
+mcp>=1.0.0,<2

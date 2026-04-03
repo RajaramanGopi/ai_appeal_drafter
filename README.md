@@ -47,9 +47,11 @@ Use two terminals: **(1)** `uvicorn app:app --reload --host 127.0.0.1 --port 800
 
 ## MCP (Cursor / Claude Desktop)
 
-Expose the same drafting pipeline to an MCP client:
+Optional — not part of the main lockfile (avoids Windows-only `pywin32` on Linux CI).
 
 ```bash
+pip install -r requirements-lock.txt
+pip install -r requirements-mcp.txt
 python -m mcp_server
 ```
 
@@ -126,8 +128,9 @@ appeal_ai/
   chroma_db/                # Vector index (from ingest)
   docs/
   requirements.txt          # Semver ranges (source for pip-compile)
-  requirements-lock.txt     # Pinned transitive deps (production installs)
-  requirements-dev.txt      # pytest, pip-audit, pip-tools (after lock)
+  requirements-lock.txt     # Pinned deps — Linux/macOS/CI safe (no mcp / pywin32)
+  requirements-mcp.txt    # Optional mcp SDK (after lock; Windows may pull pywin32)
+  requirements-dev.txt    # pip-audit, pip-tools (after lock)
   .env.example
 ```
 

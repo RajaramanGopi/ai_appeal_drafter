@@ -1,6 +1,6 @@
 # Model Context Protocol (MCP) — Appeal Drafter AI
 
-This project exposes an **MCP server** so Cursor, Claude Desktop, or other MCP clients can call the same appeal pipeline as the Streamlit app (CSV guidance, optional Chroma RAG, LLM draft, payor form fill).
+This project exposes an **MCP server** so Cursor, Claude Desktop, or other MCP clients can call the same appeal pipeline as the web/API app (CSV guidance, optional Chroma RAG, LLM draft, payor form fill).
 
 ## Security (PHI)
 
@@ -8,11 +8,16 @@ Tools accept **patient and claim fields**. Treat the MCP client and host machine
 
 ## Install
 
+MCP is **optional** and lives in `requirements-mcp.txt` so Linux CI and servers are not forced to install Windows-only `pywin32` (pulled by the `mcp` package on some platforms).
+
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-lock.txt
+pip install -r requirements-mcp.txt
 ```
 
-Ensure `.env` is configured (same as Streamlit): `LLM_PROVIDER`, `GEMINI_API_KEY` or `OPENAI_API_KEY`, etc.
+Or, from floating ranges: `pip install -r requirements.txt` then `pip install -r requirements-mcp.txt`.
+
+Ensure `.env` is configured (same as the FastAPI app): `LLM_PROVIDER`, `GEMINI_API_KEY` or `OPENAI_API_KEY`, etc.
 
 ## Run (manual / debugging)
 

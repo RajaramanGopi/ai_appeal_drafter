@@ -13,7 +13,8 @@ Central configuration package.
     project_root/
       app.py                 # ASGI entry: uvicorn app:app
       app_factory.py         # create_app(): middleware, API, static UI, error handlers
-      requirements-lock.txt # pinned deps for production (pip-compile)
+      requirements-lock.txt # pinned deps (no optional mcp / pywin32)
+      requirements-mcp.txt  # optional MCP SDK (after lock)
       .env                   # local secrets (gitignored)
       config/                # this package — all knobs in settings.py
       services/              # orchestration (appeal pipeline)
